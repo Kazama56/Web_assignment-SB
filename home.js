@@ -8,24 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('dark-theme');
     });
 });
+    const mapImage = document.querySelector('.map-image');
 
-// Additional CSS for the theme toggle button
-const style = document.createElement('style');
-style.textContent = `
-    .theme-toggle-button {
-        margin: 20px auto;
-        display: block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    
-    .theme-toggle-button:hover {
-        background-color:green;
-    }
-`;
-document.head.append(style);
+    mapImage.addEventListener('mouseover', () => {
+        mapImage.style.transform = 'scale(1.05)';
+        mapImage.style.transition = 'transform 0.3s ease';
+        mapImage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+    });
+
+    mapImage.addEventListener('mouseout', () => {
+        mapImage.style.transform = 'scale(1)';
+        mapImage.style.transition = 'transform 0.3s ease';
+        mapImage.style.boxShadow = 'none';
+    });
+

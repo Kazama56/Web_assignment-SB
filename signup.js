@@ -19,13 +19,12 @@ document.getElementById('register-form').addEventListener('submit', function (ev
         return;
     }
 
-    // Handle registration logic here (e.g., send data to the server)
     alert('Registration successful!');
+    window.location.href='home.html';
 });
 
 document.getElementById('login-form').addEventListener('submit', function (event) {
     event.preventDefault();
-
-    // Handle login logic here (e.g., send data to the server)
     alert('Login successful!');
+    window.location.href='home.html';
 });
